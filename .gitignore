@@ -1,0 +1,5 @@
+dist
+android-dist
+ios-dist
+.vagrant
+.DS_Store
