@@ -161,3 +161,14 @@ RUN IFS=" " && \
     do \
       build_pjsip.sh ${arch}; \
     done
+
+# Dist
+RUN mkdir -p /dist/android/src/main && \
+    mv /output/pjsip/* /dist/android/src/main && \
+    rm -rf /dist/android/src/main/java/org/pjsip/pjsua2/app
+
+RUN IFS=" " && \
+    for arch in $TARGET_ARCHS; \
+    do \
+      mv /output/openh264/${arch}/lib/libopenh264.so /dist/android/src/main/jniLibs/${arch}/; \
+    done
