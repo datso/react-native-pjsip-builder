@@ -12,7 +12,7 @@ cp -r /sources/openssl /tmp/openssl
 if [ "$TARGET_ARCH" == "armeabi-v7a" ]
 then
     TARGET=android-armv7
-    TOOLCHAIN=aarch64-linux-android-4.9
+    TOOLCHAIN=arm-linux-androideabi-4.9
     export TOOL=arm-linux-androideabi
     export ARCH_FLAGS="-march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16"
     export ARCH_LINK="-march=armv7-a -Wl,--fix-cortex-a8"
